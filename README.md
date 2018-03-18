@@ -1,7 +1,6 @@
-![Title Image]
-(https://raw.githubusercontent.com/ViliX64/Whipbit-Solutions/master/misc_assets/whipbit_thumbnail.png)
+# Whipbit solutions
 
-[Click through here](http://http://vilix.xyz/?p=portfolio)
+[Click through here](http://vilix.xyz/?p=portfolio)
 
 Small PhaserJS game about software devs
 
