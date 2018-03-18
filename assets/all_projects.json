@@ -1,0 +1,532 @@
+[
+ {
+  "title":        "STATIC WEBSITE",
+  "description":  "I need a website with (mostly)\nstatic content where I can share\nmy art.",
+  "requirements": ["JS", "CSS"],
+  "length":       6,
+  "publicity":    2,
+  "reward":       1500,
+  "time":         2,
+  "level":        [1, 2, 3]
+ },
+ {
+  "title":        "DATA ENTRY",
+  "description":  "We need to automate parsing some\ndata from an Excel document into\nour database.\nWe would do it ourselves,\nbut we're busy.",
+  "requirements": ["SQL"],
+  "length":       4,
+  "publicity":    1,
+  "reward":       1050,
+  "time":         2,
+  "level":        [1, 2, 3]
+ },
+ {
+  "title":        "PYTHON SCRIPT",
+  "description":  "I was fired from my job and I just\nwant to mess up their systems.\nThey deserve it..",
+  "requirements": ["Python", "Networking"],
+  "length":       8,
+  "publicity":    -7,
+  "reward":       3200,
+  "time":         9,
+  "level":        [1, 2, 3]
+ },
+ {
+  "title":        "WEBSITE MOCKUP",
+  "description":  "Our only designed is sick (long-term)\nand we need to have at least basic\nwebsite template for presentation.",
+  "requirements": ["Web Design"],
+  "length":       7,
+  "publicity":    1,
+  "reward":       1600,
+  "time":         2,
+  "level":        [1, 2, 3]
+ },
+ {
+  "title":        "LANDING PAGE",
+  "description":  "I would like to have a landing page\nfor my ..ehm.. cupcake business.",
+  "requirements": ["CSS", "HTML5"],
+  "length":       8,
+  "publicity":    -5,
+  "reward":       2550,
+  "time":         2,
+  "level":        [1, 2, 3]
+ },
+ {
+  "title":        "WEB DESIGN",
+  "description":  "We're looking for someone to\ndesign our school web.",
+  "requirements": ["CSS", "HTML5"],
+  "length":       10,
+  "publicity":    4,
+  "reward":       1200,
+  "time":         4,
+  "level":        [1, 2, 3]
+ },
+ {
+  "title":        "WEB DEBUGGING",
+  "description":  "We need to present our website\nsoon. It's finished, but we're\ntoo exhausted to debug it.",
+  "requirements": ["HTML5", "JS"],
+  "length":       10,
+  "publicity":    2,
+  "reward":       1520,
+  "time":         4,
+  "level":        [1, 2, 3]
+ },
+ {
+  "title":        "SERVER FIX",
+  "description":  "Something went wrong with our\nservers and to be frank, we have\nno idea what!",
+  "requirements": ["PHP"],
+  "length"        :18,
+  "publicity":    3,
+  "reward":       3600,
+  "time":         5,
+  "level":        [1, 2, 3]
+ },
+ {
+  "title":        "AUTOCAD PLUGIN",
+  "description":  "We upgraded our software but\nforgot that some plugins are\nincompatible with some of the\nnewer versions.",
+  "requirements": [".NET"],
+  "length":       14,
+  "publicity":    2,
+  "reward":       3300,
+  "time":         4,
+  "level":        [1, 2, 3]
+ },
+ {
+  "title":        "KEYLOGGER",
+  "description":  "I think my wife chats with her\nlover on her notebook.\nI just want to be sure.",
+  "requirements": [".NET"],
+  "length":       6,
+  "publicity":    -9,
+  "reward":       3700,
+  "time":         2,
+  "level":        [1, 2, 3]
+ },
+ {
+  "title":        "SALES PROGRAM",
+  "description":  "We'd like to have some program\nthat can connect to our sales\ndatabase.",
+  "requirements": [".NET", "SQL"],
+  "length":       12,
+  "publicity":    2,
+  "reward":       3900,
+  "time":         3,
+  "level":        [1, 2, 3]
+ },
+ {
+  "title":        "SMALL ECOMMERCE",
+  "description":  "I heard that I should get\nan e-commerce. I don't know what\nthat is, but I'll pay you for it.",
+  "requirements": ["PHP", "JS", "SQL"],
+  "length":       15,
+  "publicity":    3,
+  "reward":       2900,
+  "time":         4,
+  "level":        [1, 2, 3]
+ },
+ {
+  "title":        "BOOKING PROGRAM",
+  "description":  "We're booking a lots of flights\nand we'd like to have all\nthat automated.",
+  "requirements": [".NET", "Web API"],
+  "length":       10,
+  "publicity":    3,
+  "reward":       2750,
+  "time":         3,
+  "level":        [1, 2, 3]
+ },
+ {
+  "title":        "DATA ANALYSIS",
+  "description":  "We got into our competitor's servers\nand we got way too much data.\nWe need you to extract some\nvital informations out of it.",
+  "requirements": ["Python"],
+  "length":       9,
+  "publicity":    -9,
+  "reward":       4500,
+  "time":         3,
+  "level":        [1, 2, 3]
+ },
+ {
+  "title":        "WINDOWS PHONE",
+  "description":  "We have a brilliant idea for\na Windows Phone App.\nWe just need someone to program it.",
+  "requirements": [".NET"],
+  "length":       10,
+  "publicity":    3,
+  "reward":       3900,
+  "time":         4,
+  "level":        [1, 2, 3]
+ },
+ {
+  "title":        "APP DESIGN",
+  "description":  "I need someone to design a custom app\nfor.. ehm.. my customers.",
+  "requirements": ["UI Design"],
+  "length":       5,
+  "publicity":    -5,
+  "reward":       2800,
+  "time":         2,
+  "level":        [1, 2, 3]
+ },
+ {
+  "title":        "WEB DESIGN",
+  "description":  "We've finished the backend\nof our project, but we\nneed someone to completely design\nan interface.",
+  "requirements": ["UI Design", "Web Design"],
+  "length":       20,
+  "publicity":    3,
+  "reward":       4600,
+  "time":         4,
+  "level":        [1, 2, 3]
+ },
+ {
+  "title":        "SOCIAL NETWORK",
+  "description":  "I'm willing to pay a lot of\nmoney if you make a social\nwebsite exactly according\nto my design.",
+  "requirements": ["PHP", "SQL", "JS", "HTML5", "Web API"],
+  "length":       30,
+  "publicity":    5,
+  "reward":       8700,
+  "time":         6,
+  "level":        [2, 3]
+ },
+ {
+  "title":        "STUDENT APP",
+  "description":  "We're a team from local university\nand we have some awesome ideas.\nWe can't pay much, but we will\nspread good words.",
+  "requirements": ["Java", "Games"],
+  "length":       20,
+  "publicity":    3,
+  "reward":       2700,
+  "time":         5,
+  "level":        [1, 2, 3]
+ },
+ {
+  "title":        "ONLINE GAME",
+  "description":  "We're a game development\nstudio and we'd like\nto make a game. Unfortunately,\nwe're too small.\nWill you help?",
+  "requirements": ["Games", "Security", "PHP", "Web API", "HTML5"],
+  "length":       25,
+  "publicity":    5,
+  "reward":       6800,
+  "time":         5,
+  "level":        [2, 3]
+ },
+ {
+  "title":        "ACCOUNT CRACK",
+  "description":  "My ex is a dick and I want\nto get into his Facebook account.\nI'll pay a lot.",
+  "requirements": ["Security", "Perl"],
+  "length":       10,
+  "publicity":    -9,
+  "reward":       5200,
+  "time":         4,
+  "level":        [1, 2, 3]
+ },
+ {
+  "title":        "COMPUTATION",
+  "description":  "We need a program to do\nsome scientific computation.",
+  "requirements": [".NET", "Algorithms"],
+  "length":       6,
+  "publicity":    3,
+  "reward":       1600,
+  "time":         3,
+  "level":        [1, 2, 3]
+ },
+ {
+  "title":        "E-COMMERCE",
+  "description":  "We need stable, secure\nand scalabe e-commerce\nwebsite.",
+  "requirements": ["AJAX", "HTML5", "Servers", "Web Design"],
+  "length":       16,
+  "publicity":    5,
+  "reward":       5000,
+  "time":         6,
+  "level":        [2, 3]
+ },
+ {
+  "title":        "ROBOTS2",
+  "description":  "We plan to manufacture\nrobots and we need it\nto have some default programs.",
+  "requirements": ["Assembly"],
+  "length":       10,
+  "publicity":    4,
+  "reward":       2800,
+  "time":         5,
+  "level":        [2, 3]
+ },
+ {
+  "title":        "ROBOTS",
+  "description":  "We plan to manufacture\nrobots and we need it\nto have some default programs.",
+  "requirements": ["Assembly"],
+  "length":       5,
+  "publicity":    2,
+  "reward":       2000,
+  "time":         3,
+  "level":        [1, 2]
+ },
+ {
+  "title":        "PC GAME",
+  "description":  "We have a brilliant idea for a game,\nbut we don't know how to program.",
+  "requirements": ["C/C++", "Games"],
+  "length":       6,
+  "publicity":    3,
+  "reward":       2300,
+  "time":         4,
+  "level":        [1, 2, 3]
+ },
+ {
+  "title":        "XBOX GAME",
+  "description":  "We have a brilliant idea for a game,\nbut we don't know how to program.",
+  "requirements": ["C/C++", "Games"],
+  "length":       10,
+  "publicity":    4,
+  "reward":       2700,
+  "time":         5,
+  "level":        [1, 2, 3]
+ },
+ {
+  "title":        "SCHOOL PROJECT",
+  "description":  "I need a help with my school project.",
+  "requirements": ["CSS"],
+  "length":       2,
+  "publicity":    1,
+  "reward":       600,
+  "time":         1,
+  "level":        [1]
+ },
+ {
+  "title":        "COMPETITION",
+  "description":  "I need help.\nI signed up for a programming\ncompetition, but I can't program.",
+  "requirements": [""],
+  "length":       2,
+  "publicity":    -6,
+  "reward":       500,
+  "time":         1,
+  "level":        [1, 2]
+ },
+ {
+  "title":        "DATING APP",
+  "description":  "We have a brilliant idea for\na dating app.",
+  "requirements": ["UI Design", "Web API"],
+  "length":       4,
+  "publicity":    2,
+  "reward":       1000,
+  "time":         2,
+  "level":        [1, 2, 3]
+ },
+ {
+  "title":        "GAME COMPLETION",
+  "description":  "I have some base code for a game,\nbut I need help.",
+  "requirements": ["Games"],
+  "length":       5,
+  "publicity":    2,
+  "reward":       1200,
+  "time":         2,
+  "level":        [1, 2]
+ },
+ {
+  "title":        "PROJECT CLEAN UP",
+  "description":  "We wrote too much spaghetti code.\nWe need someone to clean our code.",
+  "requirements": ["Git", "Python"],
+  "length":       4,
+  "publicity":    1,
+  "reward":       1100,
+  "time":         2,
+  "level":        [1, 2]
+ },
+ {
+  "title":        "WEB GAME",
+  "description":  "I have an idea for a game where you\ntake care of a software company\nand use whips to motivate devs.",
+  "requirements": ["Games", "HTML5", "JS"],
+  "length":       6,
+  "publicity":    2,
+  "reward":       2200,
+  "time":         3,
+  "level":        [1, 2, 3]
+ },
+ {
+  "title":        "INTERACTIVE WEB",
+  "description":  "I heard that static websites are now\nout of date. Hence I want you to\nupgrade my web.",
+  "requirements": ["JS", "HTML5"],
+  "length":       6,
+  "publicity":    2,
+  "reward":       1500,
+  "time":         4,
+  "level":        [1, 2]
+ },
+ {
+  "title":        "PC GAME",
+  "description":  "I want you to make a game where you\nuse blocks to build structures.",
+  "requirements": ["Java", "Games"],
+  "length":       6,
+  "publicity":    1,
+  "reward":       2200,
+  "time":         4,
+  "level":        [1, 2, 3]
+ },
+ {
+  "title":        "SECURITY",
+  "description":  "After the recent\nhacking scandal, we need\n a secure connection\nto our database.",
+  "requirements": ["SQL", "TCP/IP", "Networking"],
+  "length":       21,
+  "publicity":    2,
+  "reward":       7000,
+  "time":         10,
+  "level":        [2, 3]
+ },
+ {
+  "title":        "NEIGHBOUR",
+  "description":  "I want smome super program to\nspy on my neighbour.\nDon't ask why.",
+  "requirements": ["Networking"],
+  "length":       4,
+  "publicity":    -6,
+  "reward":       2200,
+  "time":         3,
+  "level":        [1, 2]
+ },
+ {
+  "title":        "PC GAME",
+  "description":  "We're making a PC game,\nbut we need help optimizing it.",
+  "requirements": ["OpenGL", "C/C++"],
+  "length":       10,
+  "publicity":    4,
+  "reward":       2900,
+  "time":         5,
+  "level":        [1, 2, 3]
+ },
+ {
+  "title":        "DESIGN PROJECT",
+  "description":  "I need someone to program my web\ndesign project.",
+  "requirements": ["PHP", "JS"],
+  "length":       6,
+  "publicity":    1,
+  "reward":       1800,
+  "time":         4,
+  "level":        [1, 2]
+ },
+ {
+  "title":        "Git API",
+  "description":  "We need a custom Git API for our\nprojects.",
+  "requirements": ["Web API", "Git"],
+  "length":       7,
+  "publicity":    2,
+  "reward":       2200,
+  "time":         5,
+  "level":        [1, 2, 3]
+ },
+ {
+  "title":        "HACK SCRIPT",
+  "description":  "We need a hack script for a\ncertain website.",
+  "requirements": ["Perl", "Python"],
+  "length":       7,
+  "publicity":    -7,
+  "reward":       4600,
+  "time":         6,
+  "level":        [1, 2, 3]
+ },
+ {
+  "title":        "AUTOMATIZATION",
+  "description":  "We need to automate some parts\nof our system.",
+  "requirements": ["Python"],
+  "length":       3,
+  "publicity":    0,
+  "reward":       1800,
+  "time":         2,
+  "level":        [1, 2]
+ },
+ {
+  "title":        "RUBY VS PHP",
+  "description":  "I want to show my friends that Ruby is\neasier than PHP.\nUnfortunately, I was unable\nto learn it.",
+  "requirements": ["Ruby"],
+  "length":       2,
+  "publicity":    0,
+  "reward":       2100,
+  "time":         2,
+  "level":        [1, 2]
+ },
+ {
+  "title":        "SERVER CLEAN UP",
+  "description":  "Our server's performance dropped\nradically.\nWe need someone to clean up.",
+  "requirements": ["Servers"],
+  "length":       4,
+  "publicity":    0,
+  "reward":       1900,
+  "time":         2,
+  "level":        [1, 2]
+ },
+ {
+  "title":        "AUTHORIZED HACK",
+  "description":  "We want to test our security level\nby trying to hack it.",
+  "requirements": ["TCP/IP", "Security"],
+  "length":       8,
+  "publicity":    -1,
+  "reward":       3200,
+  "time":         4,
+  "level":        [1, 2, 3]
+ },
+ {
+  "title":        "LANDING PAGE",
+  "description":  "I need a landing page for my new\nsuper cool product.",
+  "requirements": ["Web Design", "JS"],
+  "length":       5,
+  "publicity":    1,
+  "reward":       1800,
+  "time":         4,
+  "level":        [1, 2]
+ },
+ {
+  "title":        "ORGANIZATION",
+  "description":  "We desperately need access\nto servers of certain\norganization.",
+  "requirements": ["Security", "Servers"],
+  "length":       20,
+  "publicity":    -10,
+  "reward":       9500,
+  "time":         10,
+  "level":        [2, 3]
+ },
+ {
+  "title":        ".NET LECTURE",
+  "description":  "We need someone to lecture\n.NET at our work place.",
+  "requirements": [".NET"],
+  "length":       5,
+  "publicity":    1,
+  "reward":       1750,
+  "time":         3,
+  "level":        [1, 2, 3]
+ },
+ {
+  "title":        "OPENGL LECTURE",
+  "description":  "We need someone to lecture\nOpenGL at our work place.",
+  "requirements": ["OpenGL"],
+  "length":       5,
+  "publicity":    1,
+  "reward":       1550,
+  "time":         3,
+  "level":        [1, 2, 3]
+ },
+ {
+  "title":        "RUBY LECTURE",
+  "description":  "We need someone to lecture\nRuby at our work place.",
+  "requirements": ["Ruby"],
+  "length":       5,
+  "publicity":    1,
+  "reward":       1950,
+  "time":         3,
+  "level":        [1, 2, 3]
+ },
+ {
+  "title":        "TCP/IP LECTURE",
+  "description":  "We need someone to lecture\nTCP/IP at our work place.",
+  "requirements": ["TCP/IP"],
+  "length":       5,
+  "publicity":    1,
+  "reward":       1850,
+  "time":         3,
+  "level":        [1, 2, 3]
+ },
+ {
+  "title":        "ALGORITHMS",
+  "description":  "We need someone to lecture\nalgorithms at our work place.",
+  "requirements": ["Algorithms"],
+  "length":       5,
+  "publicity":    1,
+  "reward":       1750,
+  "time":         3,
+  "level":        [1, 2, 3]
+ },
+ {
+  "title":        "PERL LECTURE",
+  "description":  "We need someone to lecture\nPerl at our work place.",
+  "requirements": ["Perl"],
+  "length":       5,
+  "publicity":    1,
+  "reward":       2250,
+  "time":         3,
+  "level":        [1, 2, 3]
+ }
+]
