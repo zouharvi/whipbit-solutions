@@ -1,6 +1,6 @@
 # Whipbit solutions
 
-[Click through here](http://vilix.xyz/?p=portfolio)
+[Click through here](https://vilda.net/?p=portfolio)
 
 Small PhaserJS game about software devs
 
