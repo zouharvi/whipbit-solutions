@@ -89,15 +89,22 @@ Stats.prototype.update = function() {
 }
 
 var BottomUI = function() {
- createButton(5, 517, 'button_bottom_ui', function() { windowOverlaySwitch('management'); }, this, 1, 1, 0);
- createText(17, 525, 'MANAGEMENT', 16);
+ const buttonSize = 45*4;
+ const buttonY = 516;
 
- createButton(193, 517, 'button_bottom_ui', function() { windowOverlaySwitch('upgrades');}, this, 1, 1, 0);
- createText(218, 525, 'UPGRADES', 16);
+ /* button 1 - margin left: 9 */
+ createButton(9, buttonY, 'button_bottom_ui', function() { windowOverlaySwitch('management'); }, this, 1, 1, 0);
+ createText(19, 525, 'MANAGEMENT', 16);
 
- createButton(381, 517, 'button_bottom_ui', function() { windowOverlaySwitch('help'); }, this, 1, 1, 0);
- createText(439, 525, 'HELP', 16);
+ /* button 2 - margin left: 10 */
+ createButton(buttonSize+9+10, buttonY, 'button_bottom_ui', function() { windowOverlaySwitch('upgrades');}, this, 1, 1, 0);
+ createText(226, 525, 'UPGRADES', 16);
 
- createButton(571, 517, 'button_bottom_ui', function() { window.open('https://twitter.com/ViliX64', '_blank'); }, this, 1, 1, 0);
- createText(597, 525, '@VILIX64', 16);
+ /* button 3 - margin left: 10 */
+ createButton((buttonSize*2)+9+(10*2), buttonY, 'button_bottom_ui', function() { windowOverlaySwitch('help'); }, this, 1, 1, 0);
+ createText(447, 525, 'HELP', 16);
+
+ /* button 4 - margin left: 10, margin right: 9 */
+ createButton((buttonSize*3)+9+(10*3), buttonY, 'button_bottom_ui', function() { window.open('https://github.com/zouharvi/whipbit-solutions#whipbit-solutions', '_blank'); }, this, 1, 1, 0);
+ createText(633, 525, 'ABOUT', 16);
 }
