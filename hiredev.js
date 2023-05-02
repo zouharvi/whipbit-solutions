@@ -1,7 +1,7 @@
 HireDev = function() {
  this.g = game.add.group();
  this.g.add(createButton(0, 0, 'window_background', function() {}, this, 0, 0, 0));
- 
+
  this.devName = this.g.add(createText(105, 110, '', 16));
  this.devDesc = this.g.add(createText(105, 150, '', 16));
  this.devSkillsText = this.g.add(createText(105, 370, 'SKILLS:', 16));
@@ -10,7 +10,7 @@ HireDev = function() {
  this.devHireFee = this.g.add(createText(105, 265, '', 16));
  this.devSpeed = this.g.add(createText(105, 300, '', 16));
  this.devSkillPoints = this.g.add(createText(105, 335, '', 16));
- 
+
  this.buttonPrev = this.g.add(createButton(105, 437, 'button_whip', function() { this.showNext(-1); }, this, 1, 1, 0));
  this.buttonPrevText = this.g.add(createText(114, 444, 'PREV', 16));
  this.devsIndicator = this.g.add(createText(213, 444, "0/0", 16));
@@ -22,7 +22,7 @@ HireDev = function() {
    pause(false);
  }, this, 1, 1, 0));
  this.g.add(createText(597, 444, 'BACK', 16));
- 
+
  this.placeholderTable = this.g.add(createSprite(521, 249, 'placeholder_table'));
  this.prevSprite = this.g.add(createSprite(520, 160, 'developers'));
 
@@ -48,7 +48,7 @@ HireDev.prototype.showNext = function(off) {
   this.currentN = this.maxN;
  if(this.currentN < 1)
   this.currentN = 1;
- 
+
  this.update();
 }
 
@@ -64,7 +64,7 @@ HireDev.prototype.display = function(cN, pauseLater) {
 
 HireDev.prototype.update = function() {
  this.maxN = availableDevelopers.length;
- 
+
  if(this.maxN == 0) {
   this.devName.setText('No candidates\n\nPositive reputation will attract\nmore next month');
   this.devDesc.visible = false;
@@ -88,7 +88,7 @@ HireDev.prototype.update = function() {
   this.buttonNextText.visible = false;
   return;
  }
- 
+
  this.devDesc.visible = true;
  this.devSalary.visible = true;
  this.devHireFee.visible = true;
@@ -121,19 +121,19 @@ HireDev.prototype.update = function() {
   this.buttonHireText.visible = false;
   this.unavailableText.visible = true;
  }
- 
+
  this.buttonPrev.visible = true;
  this.buttonPrevText.visible = true;
  this.buttonNext.visible = true;
  this.buttonNextText.visible = true;
-  
+
  this.devName.setText(curDev['name']);
  this.devDesc.setText(curDev['description']);
  this.devSkillPoints.setText('FREE SKILL POINTS: ' + curDev['skill_points']);
  this.devSalary.setText('SALARY: $' + curDev['salary']);
  this.devHireFee.setText('HIRE FEE: $' + curDev['hire_fee']);
  this.devSpeed.setText('SPEED: ' + curDev['speed']);
- 
+
  this.prevSprite.frame = (curDev['id'])*3;
 
  var skillsWords = '';

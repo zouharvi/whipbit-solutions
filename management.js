@@ -28,19 +28,19 @@ var allSkills = [
 var allSkillsAvailable = [];
 
 var ManagementMenu = function() {
- this.g = game.add.group(); 
- this.g.add(createText(105, 110, 'MANAGEMENT', 16)); 
- this.salariesText = this.g.add(createText(105, 150, '', 16)); 
- 
+ this.g = game.add.group();
+ this.g.add(createText(105, 110, 'MANAGEMENT', 16));
+ this.salariesText = this.g.add(createText(105, 150, '', 16));
+
  this.g.visible = false;
 }
 
 ManagementMenu.prototype.update = function() {
  this.salariesText.setText('SALARIES (TOTAL): $' + stats.salaries);
- 
+
  if(typeof(this.devs) != 'undefined')
   this.devs.destroy(true);
- 
+
  this.devs = game.add.group();
  this.g.add(this.devs);
 
@@ -62,25 +62,25 @@ ManagementMenu.prototype.update = function() {
 }
 
 ManagementMenu.prototype.displayDev = function(i) {
- this.gDev = game.add.group(); 
+ this.gDev = game.add.group();
  var developer = developers[i];
  this.gDev.add(createButton(0, 0, 'window_background', function() {}, 0, 0, 0));
  this.gDev.add(createText(105, 110, developer.name, 16));
  var duration = stats.month - developer.startMonth;
- this.gDev.add(createText(105, 150, developer.description, 16)); 
- this.gDev.add(createText(105, 220, 'Employed for ' + duration + ' month' + (duration==1?'':'s'), 16)); 
- this.gDev.add(createText(105, 260, 'Level: ' + developer.level, 16)); 
- this.gDev.add(createText(105, 290, 'Salary: $' + developer.salary, 16)); 
- this.gDev.add(createText(105, 320, 'Speed: ' + developer.speed, 16)); 
- this.gDev.add(createText(105, 350, 'XP: ' + Math.floor(developer.exp) + '^/' + (developer.level * 100) + '^', 16)); 
- this.gDev.add(createText(105, 380, 'SKILL POINTS: ' + developer.skillPoints, 16)); 
+ this.gDev.add(createText(105, 150, developer.description, 16));
+ this.gDev.add(createText(105, 220, 'Employed for ' + duration + ' month' + (duration==1?'':'s'), 16));
+ this.gDev.add(createText(105, 260, 'Level: ' + developer.level, 16));
+ this.gDev.add(createText(105, 290, 'Salary: $' + developer.salary, 16));
+ this.gDev.add(createText(105, 320, 'Speed: ' + developer.speed, 16));
+ this.gDev.add(createText(105, 350, 'XP: ' + Math.floor(developer.exp) + '^/' + (developer.level * 100) + '^', 16));
+ this.gDev.add(createText(105, 380, 'SKILL POINTS: ' + developer.skillPoints, 16));
 
 this.gDev.add(createButton(105, 437, 'button_whip', function() { this.fireDev(i); }, this, 1, 1, 0));
- this.gDev.add(createText(114, 444, 'FIRE', 16));  
+ this.gDev.add(createText(114, 444, 'FIRE', 16));
  this.gDev.add(createButton(195, 437, 'button_cancel_long', function() { this.promoteDev(i); }, this, 1, 1, 0));
- this.gDev.add(createText(223, 444, 'PROMOTE', 16));  
+ this.gDev.add(createText(223, 444, 'PROMOTE', 16));
  this.gDev.add(createButton(365, 437, 'button_cancel', function() { this.skillsDev(i, false); }, this, 1, 1, 0));
- this.gDev.add(createText(378, 444, 'SKILLS', 16));  
+ this.gDev.add(createText(378, 444, 'SKILLS', 16));
 
  var posY = [270, 310, 350, 390];
  var offQ = 0;
@@ -105,16 +105,16 @@ this.gDev.add(createButton(105, 437, 'button_whip', function() { this.fireDev(i)
   project_select.project = projects[q];
   if(developers[i].projects.indexOf(projects[q]) == -1)
    project_select.avail_indicator.frame = 1;
-  this.gDev.add(createText(431, posY[q-offQ]+7, projects[q].name, 16));  
+  this.gDev.add(createText(431, posY[q-offQ]+7, projects[q].name, 16));
  }
 
  this.gDev.add(createButton(588, 437, 'button_whip', function() { this.gDev.destroy(true); }, this, 1, 1, 0));
- this.gDev.add(createText(597, 444, 'BACK', 16));  
+ this.gDev.add(createText(597, 444, 'BACK', 16));
  this.gDev.visible = true;
 }
 
 ManagementMenu.prototype.buySkill = function(i, skill, q) {
- this.gDevSkillBuy = game.add.group(); 
+ this.gDevSkillBuy = game.add.group();
  var developer = developers[i];
  this.gDevSkillBuy.add(createButton(0, 0, 'window_alert_background', function() {}, 0, 0, 0));
 
@@ -127,23 +127,23 @@ ManagementMenu.prototype.buySkill = function(i, skill, q) {
    this.gDevSkills.destroy(true);
    this.skillsDev(i, q);
   }, this, 1, 1, 0));
-  this.gDevSkillBuy.add(createText(285, 344, 'YES', 16)); 
+  this.gDevSkillBuy.add(createText(285, 344, 'YES', 16));
  } else {
   this.gDevSkillBuy.add(createText(180, 260, skill[0] + ' costs ' + skill[1] + ' skill points', 16));
  }
 
  this.gDevSkillBuy.add(createButton(410, 337, 'button_whip', function() { this.gDevSkillBuy.destroy(true); }, this, 1, 1, 0));
- this.gDevSkillBuy.add(createText(418, 344, 'BACK', 16)); 
+ this.gDevSkillBuy.add(createText(418, 344, 'BACK', 16));
 }
 
 ManagementMenu.prototype.skillsDev = function(i, p) {
  if(p)
   pause(true);
- this.gDevSkills = game.add.group(); 
+ this.gDevSkills = game.add.group();
  var developer = developers[i];
  this.gDevSkills.add(createButton(0, 0, 'window_background', function() {}, 0, 0, 0));
- this.gDevSkillPoints = this.gDevSkills.add(createText(105, 105, developer.name + ' has ' + developer.skillPoints + ' skill point' + (developer.skillPoints==1?'':'s'), 16)); 
- 
+ this.gDevSkillPoints = this.gDevSkills.add(createText(105, 105, developer.name + ' has ' + developer.skillPoints + ' skill point' + (developer.skillPoints==1?'':'s'), 16));
+
  for(var j = 0; j < allSkillsAvailable.length; j++) {
   if(developer.skills.indexOf(allSkillsAvailable[j][0]) == -1) {
    var skillButton = this.gDevSkills.add(createButton(105+Math.floor(j/8)*195, 140+(j%8)*37, 'button_bottom_ui', function(b) { this.buySkill(i, b.skill, p); }, this, 1, 1, 0));
@@ -159,17 +159,17 @@ ManagementMenu.prototype.skillsDev = function(i, p) {
   if(p)
    pause(false);
  }, this, 1, 1, 0));
- this.gDevSkills.add(createText(597, 444, 'BACK', 16)); 
- 
+ this.gDevSkills.add(createText(597, 444, 'BACK', 16));
+
  this.gDevSkills.visible = true;
 }
 
 ManagementMenu.prototype.fireDev = function(i) {
- this.gDevFire = game.add.group(); 
+ this.gDevFire = game.add.group();
  var developer = developers[i];
  this.gDevFire.add(createButton(0, 0, 'window_alert_background', function() {}, 0, 0, 0));
  this.gDevFire.add(createText(295, 260, 'Fire ' + developer.name + '?', 16));
- 
+
  this.gDevFire.add(createButton(272, 337, 'button_whip', function() {
   this.gDevFire.destroy(true);
   this.gDev.destroy(true);
@@ -181,20 +181,20 @@ ManagementMenu.prototype.fireDev = function(i) {
   studio.relocateDevs();
   this.update();
  }, this, 1, 1, 0));
- this.gDevFire.add(createText(285, 344, 'YES', 16)); 
+ this.gDevFire.add(createText(285, 344, 'YES', 16));
 
  this.gDevFire.add(createButton(410, 337, 'button_whip', function() { this.gDevFire.destroy(true); }, this, 1, 1, 0));
- this.gDevFire.add(createText(418, 344, 'BACK', 16)); 
- 
+ this.gDevFire.add(createText(418, 344, 'BACK', 16));
+
  this.gDevFire.visible = true;
 }
 
 ManagementMenu.prototype.promoteDev = function(i) {
- this.gDevProm = game.add.group(); 
+ this.gDevProm = game.add.group();
  var developer = developers[i];
  this.gDevProm.add(createButton(0, 0, 'window_alert_background', function() {}, 0, 0, 0));
  var price = developer.level * 110 - Math.floor(developer.exp/2);
- 
+
  if(price > stats.money) {
   this.gDevProm.add(createText(250, 230, "You need $" + price + '\nto promote ' + developer.name, 16)).align = 'center';
  } else {
@@ -208,11 +208,11 @@ ManagementMenu.prototype.promoteDev = function(i) {
    stats.update();
    this.update();
   }, this, 1, 1, 0));
-  this.gDevProm.add(createText(285, 344, 'YES', 16)); 
+  this.gDevProm.add(createText(285, 344, 'YES', 16));
  }
 
  this.gDevProm.add(createButton(410, 337, 'button_whip', function() { this.gDevProm.destroy(true); }, this, 1, 1, 0));
- this.gDevProm.add(createText(418, 344, 'BACK', 16)); 
- 
+ this.gDevProm.add(createText(418, 344, 'BACK', 16));
+
  this.gDevProm.visible = true;
 }

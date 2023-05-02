@@ -45,24 +45,24 @@ Game.prototype = {
   new BottomUI();
   new OverlayMenu();
   hireDev = new HireDev();
-  
+
   projects = [null, null, null, null];
 
   new Developer(startDevId);
-  
+
   newProject = new NewProject();
-  
+
   newProject.replace(0);
   newProject.replace(1);
   newProject.replace(2);
   newProject.replace(3);
-  
+
   hireDev.randomHire(false);
- 
+
   var timer = createTimer(false);
   timer.loop(12000, function() { newProject.unlockRandom(0.25, true); }, this);
-  timer.start(); 
-  
+  timer.start();
+
   studio.inc();
   managementMenu.update();
   newProject.unlockRandom(2, false);

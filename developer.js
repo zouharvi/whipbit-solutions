@@ -64,8 +64,8 @@ var Developer = function(id) {
 
  this.timer = createTimer(false);
  this.timer.loop(100, this.develop, this);
- this.timer.start(); 
- 
+ this.timer.start();
+
  this.projects = [];
  this.projectSkills = [];
 
@@ -120,7 +120,7 @@ Developer.prototype.updateLoader = function() {
    }
    var skill = aptSkills[Math.floor(Math.random()*aptSkills.length)];
    var target = project.getPosition(skill);
-   new FPoint(this.posX+65, this.posY, target, project); 
+   new FPoint(this.posX+65, this.posY, target, project);
    this.fPointLoaderProgress = 16;
    this.incExp(0.5+1/this.level, true);
   }
@@ -136,7 +136,7 @@ Developer.prototype.updateMotivation = function() {
 
 Developer.prototype.incMotivation = function() {
  this.motivation += 1 + studio.whipBoost;
- if(this.motivation > 16) this.motivation = 16.12; 
+ if(this.motivation > 16) this.motivation = 16.12;
  else this.incExp(0.1, true);
  this.updateMotivation();
 }
@@ -144,7 +144,7 @@ Developer.prototype.incMotivation = function() {
 Developer.prototype.tryAddProject = function(project) {
  if(this.projects.indexOf(project) != -1)
   return false;
- 
+
  var cells = project.cells;
  var found = false;
  for(var k in cells) {
@@ -155,7 +155,7 @@ Developer.prototype.tryAddProject = function(project) {
  }
  if(!found)
   return false;
- 
+
  this.projects.push(project);
  this.projectSkills.push([]);
  for(var i = 0; i < project.requirements.length; i++)

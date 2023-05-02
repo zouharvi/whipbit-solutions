@@ -13,10 +13,10 @@ Studio = function() {
 // upgrades part
  this.coffeePrice = 30;
  this.coffeeBoost = 0;
- 
+
  this.whipPrice = 50;
  this.whipBoost = 0;
- 
+
  this.whip2Price = 70;
  this.whip2Boost = 0;
 }
@@ -39,7 +39,7 @@ Studio.prototype.inc = function() {
 
 Studio.prototype.relocateDevs = function() {
  for(var i = 0; i < developers.length; i++) {
-  developers[i].relocate(); 
+  developers[i].relocate();
  }
 }
 
