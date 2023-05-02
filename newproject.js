@@ -6,13 +6,13 @@ NewProject = function() {
  this.projectPublicity = this.g.add(createText(105, 320, '', 16));
  this.projectLength = this.g.add(createText(105, 360, '', 16));
  this.projectReward = this.g.add(createText(105, 400, '', 16));
- 
+
  this.buttonPrev = this.g.add(createButton(105, 437, 'button_whip', function() { this.showNext(-1); }, this, 1, 1, 0));
  this.buttonPrevText = this.g.add(createText(114, 444, 'PREV', 16));
  this.projectsIndicator = this.g.add(createText(213, 444, "0/0", 16));
  this.buttonNext = this.g.add(createButton(318, 437, 'button_whip', function() { this.showNext(1); }, this, 1, 1, 0));
  this.buttonNextText = this.g.add(createText(327, 444, 'NEXT', 16));
- 
+
  this.buttonAccept = this.g.add(createButton(478, 103, 'button_bottom_ui', function() {
   var curProject = availableProjects[this.currentN-1];
   availableProjects.splice(this.currentN-1, 1);
@@ -43,7 +43,7 @@ NewProject.prototype.replace = function(place) {
 NewProject.prototype.display = function(b, cN) {
  this.currentN = cN;
  this.update();
- lastProjectLocation = b.place; 
+ lastProjectLocation = b.place;
  windowOverlaySwitch('newproject');
 }
 
@@ -53,7 +53,7 @@ NewProject.prototype.showNext = function(off) {
   this.currentN = this.maxN;
  if(this.currentN < 1)
   this.currentN = 1;
- 
+
  this.update();
 }
 
@@ -77,7 +77,7 @@ NewProject.prototype.update = function() {
   this.unavailableText.visible = false;
  } else {
   var curProject = availableProjects[this.currentN-1];
-  
+
   this.projectsIndicator.visible = true;
   if(requirementsMatch(curProject['requirements'])) {
    this.buttonAccept.visible = true;
@@ -92,7 +92,7 @@ NewProject.prototype.update = function() {
   this.buttonPrevText.visible = true;
   this.buttonNext.visible = true;
   this.buttonNextText.visible = true;
-  
+
   this.projectTitle.setText(curProject['title']);
   this.projectDesc.setText(curProject['description']);
   this.projectReward.setText(   'REWARD:          $' + curProject['reward']);
@@ -115,7 +115,7 @@ NewProject.prototype.update = function() {
   else
    lengthWords = 'N/A';
   this.projectLength.setText(   'LENGTH (EST):    ' + lengthWords);
-  
+
   var publicity = curProject['publicity'];
   if(publicity < -10)
    publicityWords = 'Almost unacceptable';
@@ -138,7 +138,7 @@ NewProject.prototype.update = function() {
   else
    publicityWords = 'N/A';
   this.projectPublicity.setText('PUBLICITY (EST): ' + publicityWords);
-  
+
   var requirementsWords = '';
   var requirementsList = curProject['requirements'];
   for(var i = 0; i < requirementsList.length; i++) {
@@ -166,7 +166,7 @@ NewProject.prototype.unlockRandom = function(odds, indicate) {
   return;
 
  var remProjects = allProjects.slice();
- 
+
  while(remProjects.length > 0) {
   var i = Math.floor(Math.random() * remProjects.length);
   var project = remProjects[i];
@@ -180,7 +180,7 @@ NewProject.prototype.unlockRandom = function(odds, indicate) {
    }
   }
   remProjects.splice(i, 1);
- } 
+ }
 }
 
 function requirementsMatch(skills) {
@@ -195,6 +195,6 @@ function requirementsMatch(skills) {
   if(!found)
    return false;
  }
- 
+
  return true;
 }

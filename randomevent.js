@@ -1,12 +1,12 @@
 RandomEvent = function() {
- this.g = game.add.group(); 
+ this.g = game.add.group();
  this.g.add(createButton(0, 0, 'window_alert_background', function() {}, this, 0, 0, 0));
  this.g.add(createButton(340, 337, 'button_whip', function() {
   this.g.visible = false;
   pause(false);
  }, this, 1, 1, 0));
- this.g.add(createText(362, 344, 'OK', 16)); 
- this.infoText = this.g.add(createText(185, 240, '', 16)); 
+ this.g.add(createText(362, 344, 'OK', 16));
+ this.infoText = this.g.add(createText(185, 240, '', 16));
  this.infoText.align = 'center';
  this.g.visible = false;
 
@@ -79,7 +79,7 @@ RandomEvent.prototype.random = function() {
 RandomEvent.prototype.display = function(op) {
  pause(true);
  switch(op) {
- case 0: 
+ case 0:
   this.infoText.x = 230;
   this.infoText.setText(this.devName + ' has learned\n' + this.randomSkill);
   break;

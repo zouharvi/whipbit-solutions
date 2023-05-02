@@ -13,7 +13,7 @@ var Project = function (projectAssigment) {
  this.monthsLeft = projectAssigment['time'];
  this.height = 5;
  this.width = projectAssigment['length'];
- 
+
  this.cells = {};
  this.cellWidth = this.width/this.requirements.length;
  for(var i = 0; i < this.requirements.length; i++)
@@ -21,8 +21,8 @@ var Project = function (projectAssigment) {
 
  var place = 0;
  for(; place < projects.length; place++)
-  if(projects[place] == null) break; 
- 
+  if(projects[place] == null) break;
+
  if(lastProjectLocation != -1)
   place = lastProjectLocation;
 
@@ -30,31 +30,31 @@ var Project = function (projectAssigment) {
  this.place = place;
 
  // group for this.overlay
- this.g = game.add.group(); 
- this.g.add(createText(105, 110, this.name, 16)); 
- this.progressText = this.g.add(createText(105, 150, 'PROGRESS: 0%', 16)); 
- this.g.add(createText(105, 190, 'REWARD: $' + this.rewardMoney, 16)); 
- this.remMonthsText = this.g.add(createText(105, 230, 'REMAINING MONTHS ' + this.monthsLeft, 16)); 
- this.g.add(createText(395, 190, 'PUBLICITY: ' + this.rewardReputationStanding + '*', 16)); 
+ this.g = game.add.group();
+ this.g.add(createText(105, 110, this.name, 16));
+ this.progressText = this.g.add(createText(105, 150, 'PROGRESS: 0%', 16));
+ this.g.add(createText(105, 190, 'REWARD: $' + this.rewardMoney, 16));
+ this.remMonthsText = this.g.add(createText(105, 230, 'REMAINING MONTHS ' + this.monthsLeft, 16));
+ this.g.add(createText(395, 190, 'PUBLICITY: ' + this.rewardReputationStanding + '*', 16));
  var requirementsWords = '';
  for(var i = 0; i < this.requirements.length; i++) {
   requirementsWords += this.requirements[i];
   if(i != this.requirements.length -1)
    requirementsWords += ', ';
  }
- this.g.add(createText(105, 270, 'REQUIREMENTS: ' + requirementsWords, 16)); 
- this.g.add(createText(105, 305, this.description, 16)); 
+ this.g.add(createText(105, 270, 'REQUIREMENTS: ' + requirementsWords, 16));
+ this.g.add(createText(105, 305, this.description, 16));
  this.g.add(createButton(105, 437, 'button_whip', function() { this.gShip.visible = true; }, this, 1, 1, 0));
- this.g.add(createText(113, 444, 'SHIP', 16)); 
+ this.g.add(createText(113, 444, 'SHIP', 16));
  this.g.add(createButton(195, 437, 'button_cancel', function() { this.gCancel.visible = true;}, this, 1, 1, 0));
- this.g.add(createText(208, 444, 'CANCEL', 16)); 
+ this.g.add(createText(208, 444, 'CANCEL', 16));
  this.g.visible = false;
- overlayGroups[this.name+this.description] = this.g; 
- 
+ overlayGroups[this.name+this.description] = this.g;
+
  // group for shipping unfinished project:
- this.gShip = game.add.group(); 
+ this.gShip = game.add.group();
  this.gShip.add(createButton(0, 0, 'window_alert_background', function() {}, 0, 0, 0));
- this.gShip.add(createText(170,240,'DO YOU REALLY WANT TO SHIP\n  AN UNFINISHED PROJECT?\n   (REPUTATION PENALTY)\n     (SOME MONEY GAIN)', 16)); 
+ this.gShip.add(createText(170,240,'DO YOU REALLY WANT TO SHIP\n  AN UNFINISHED PROJECT?\n   (REPUTATION PENALTY)\n     (SOME MONEY GAIN)', 16));
  this.gShip.add(createButton(272, 337, 'button_whip', function() {
   this.done = true;
   windowOverlaySwitch(-1);
@@ -65,16 +65,16 @@ var Project = function (projectAssigment) {
   this.g.visible = false;
   this.removeFromLists();
  }, this, 1, 1, 0));
- this.gShip.add(createText(285, 344, 'YES', 16)); 
+ this.gShip.add(createText(285, 344, 'YES', 16));
  this.gShip.add(createButton(410, 337, 'button_whip', function() { this.gShip.visible = false; }, this, 1, 1, 0));
- this.gShip.add(createText(418, 344, 'BACK', 16)); 
+ this.gShip.add(createText(418, 344, 'BACK', 16));
  this.g.add(this.gShip);
  this.gShip.visible = false;
- 
+
  // group for canceling project:
- this.gCancel = game.add.group(); 
+ this.gCancel = game.add.group();
  this.gCancel.add(createButton(0, 0, 'window_alert_background', function() {}, 0, 0, 0));
- this.gCancel.add(createText(200, 240, '  DO YOU REALLY WANT TO\n   CANCEL THIS PROJECT?\n(SMALL REPUTATION PENALTY)', 16)); 
+ this.gCancel.add(createText(200, 240, '  DO YOU REALLY WANT TO\n   CANCEL THIS PROJECT?\n(SMALL REPUTATION PENALTY)', 16));
  this.gCancel.add(createButton(272, 337, 'button_whip', function() {
   this.done = true;
   windowOverlaySwitch(-1);
@@ -84,16 +84,16 @@ var Project = function (projectAssigment) {
   this.g.visible = false;
   this.removeFromLists();
  }, this, 1, 1, 0));
- this.gCancel.add(createText(285, 344, 'YES', 16)); 
+ this.gCancel.add(createText(285, 344, 'YES', 16));
  this.gCancel.add(createButton(410, 337, 'button_whip', function() { this.gCancel.visible = false; }, this, 1, 1, 0));
- this.gCancel.add(createText(418, 344, 'NOPE', 16)); 
+ this.gCancel.add(createText(418, 344, 'NOPE', 16));
  this.g.add(this.gCancel);
  this.gCancel.visible = false;
- 
+
  // group for failing in completing the project:
- this.gFail = game.add.group(); 
+ this.gFail = game.add.group();
  this.gFail.add(createButton(0, 0, 'window_alert_background', function() {}, 0, 0, 0));
- this.gFailText = this.gFail.add(createText(220,240,'', 16)); 
+ this.gFailText = this.gFail.add(createText(220,240,'', 16));
  this.gFail.add(createButton(340, 337, 'button_whip', function() {
   this.done = true;
   this.g.visible = false;
@@ -102,9 +102,9 @@ var Project = function (projectAssigment) {
   this.removeFromLists();
   pause(false);
  }, this, 1, 1, 0));
- this.gFail.add(createText(362, 344, 'OK', 16)); 
+ this.gFail.add(createText(362, 344, 'OK', 16));
  this.gFail.visible = false;
- 
+
  // initializes main project button and text
  this.all = game.add.group();
  this.all.add(createButton(posX[place]-8, posY[place], 'button_project', function() { this.display(); }, this, 1, 1, 0));
@@ -117,7 +117,7 @@ var Project = function (projectAssigment) {
  this.assigned = -1;
  this.done = false;
  this.readyToCount = false;
- 
+
  // initializes background for points
  for(var i = this.requirements.length-1; i >= 0; i--) {
   var bd = game.add.bitmapData(this.width, this.height);
@@ -129,16 +129,16 @@ var Project = function (projectAssigment) {
   this.backgroundSprite.alpha = 0.1+i*0.05;
   this.all.add(this.backgroundSprite);
  }
- 
+
 }
 
 Project.prototype.display = function() {
- this.gShip.visible = false;  
+ this.gShip.visible = false;
  this.gCancel.visible = false;
  var tmpAssigned = this.assigned;
  if(tmpAssigned < 0) tmpAssigned = 0;
- this.progressText.setText('PROGRESS: ' + Math.floor(tmpAssigned/this.capacity*100) + '%'); 
- this.remMonthsText.setText('REMAINING MONTHS: ' + this.monthsLeft); 
+ this.progressText.setText('PROGRESS: ' + Math.floor(tmpAssigned/this.capacity*100) + '%');
+ this.remMonthsText.setText('REMAINING MONTHS: ' + this.monthsLeft);
  windowOverlaySwitch(this.name+this.description);
 }
 
@@ -180,7 +180,7 @@ Project.prototype.decMonth = function() {
    percentage = Math.floor(this.assigned/this.capacity*100);
 
   var actuallReward = percentage/100*this.rewardMoney*Math.floor(Math.random() * 3 + 1);
-  this.gFailText.setText("You completed\n" + percentage + "% of the project.\n" + 
+  this.gFailText.setText("You completed\n" + percentage + "% of the project.\n" +
   "\nWe will pay you $" + actuallReward);
   this.gFailText.align = 'center';
   stats.money += actuallReward;

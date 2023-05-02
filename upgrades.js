@@ -1,7 +1,7 @@
 var UpgradesMenu = function() {
- this.g = game.add.group(); 
- this.g.add(createText(105, 110, 'UPGRADES', 16)); 
- 
+ this.g = game.add.group();
+ this.g.add(createText(105, 110, 'UPGRADES', 16));
+
  this.skillBut = this.g.add(createButton(395, 140, 'button_project', function() { this.showSkills(); }, this, 1, 1, 0));
  this.skillLabel = this.g.add(createText(404, 150, 'BUY SKILLS', 16));
 
@@ -14,17 +14,17 @@ var UpgradesMenu = function() {
  this.coffeeLabel = this.g.add(createText(114, 230, 'BETTER COFFEE   MORE PRODUCTIVITY', 16));
  this.coffeePrice = this.g.add(createText(260, 257, '$30', 16));
  this.officePrice.align='right';
- 
+
  this.whipBut = this.g.add(createButton(105, 300, 'button_project', function() { this.tryBuy('whip_1'); }, this, 1, 1, 0));
  this.whipLabel = this.g.add(createText(114, 310,   'LONGER WHIP     MOTIVATION BOOST', 16));
  this.whipPrice = this.g.add(createText(260, 337, '$50', 16));
  this.whipPrice.align='right';
- 
+
  this.whip2But = this.g.add(createButton(105, 380, 'button_project', function() { this.tryBuy('whip_2'); }, this, 1, 1, 0));
  this.whip2Label = this.g.add(createText(114, 390,  'STRONGER WHIP   LESS MOTIVATION LOSS', 16));
  this.whip2Price = this.g.add(createText(260, 417, '$50', 16));
  this.whip2Price.align='right';
- 
+
  this.g.visible = false;
 }
 
@@ -82,16 +82,16 @@ UpgradesMenu.prototype.tryBuy = function(code) {
 
 UpgradesMenu.prototype.confrim = function(price) {
  if(price > stats.money) {
-  this.gNM = game.add.group(); 
+  this.gNM = game.add.group();
   this.gNM.add(createButton(0, 0, 'window_alert_background', function() {}, 0, 0, 0));
-  this.gNM.add(createText(166, 260, 'You don\'t have enough money', 16)); 
+  this.gNM.add(createText(166, 260, 'You don\'t have enough money', 16));
   this.gNM.add(createButton(344, 337, 'button_whip', function() {
    this.gNM.visible = false;
   }, this, 1, 1, 0));
-  this.gNM.add(createText(370, 344, 'OK', 16));  
+  this.gNM.add(createText(370, 344, 'OK', 16));
   return false;
  }
- 
+
  stats.money -= price;
  stats.update();
  return true;
@@ -114,11 +114,11 @@ UpgradesMenu.prototype.showSkills = function() {
  this.gSkills.add(createButton(588, 437, 'button_whip', function() {
   this.gSkills.destroy(true);
  }, this, 1, 1, 0));
- this.gSkills.add(createText(597, 444, 'BACK', 16)); 
+ this.gSkills.add(createText(597, 444, 'BACK', 16));
 }
 
 UpgradesMenu.prototype.buySkill = function(skill) {
- this.gSkillBuy = game.add.group(); 
+ this.gSkillBuy = game.add.group();
  this.gSkillBuy.add(createButton(0, 0, 'window_alert_background', function() {}, 0, 0, 0));
  var price = skill[1]*300;
 
@@ -132,11 +132,11 @@ UpgradesMenu.prototype.buySkill = function(skill) {
    this.gSkills.destroy(true);
    this.showSkills();
   }, this, 1, 1, 0));
-  this.gSkillBuy.add(createText(285, 344, 'YES', 16)); 
+  this.gSkillBuy.add(createText(285, 344, 'YES', 16));
  } else {
   this.gSkillBuy.add(createText(200, 260, skill[0] + ' costs $' + price, 16));
  }
 
  this.gSkillBuy.add(createButton(410, 337, 'button_whip', function() { this.gSkillBuy.destroy(true); }, this, 1, 1, 0));
- this.gSkillBuy.add(createText(418, 344, 'BACK', 16)); 
+ this.gSkillBuy.add(createText(418, 344, 'BACK', 16));
 }

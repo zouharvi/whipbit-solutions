@@ -8,14 +8,14 @@ Tutorial = function() {
  var background = this.g.add(game.add.button(0, 0, bd));
  background.scale.setTo(768, 552);
  background.alpha = 0.4;
- 
+
  this.dialog = this.g.add(createSprite(0, 0, 'tutorial_background'));
  this.text = this.g.add(createText(0, 0, '', 16));
  this.text.align = 'center';
- 
+
  this.ok = this.g.add(createButton(0, 0, 'button_whip', this.commence, this, 1, 1, 0));
- this.okT = this.g.add(createText(0, 0, 'OK', 16)); 
- 
+ this.okT = this.g.add(createText(0, 0, 'OK', 16));
+
  this.g.visible = false;
 
  this.list = [];
@@ -39,7 +39,7 @@ Tutorial.prototype.commence = function() {
   this.g.visible = true;
   game.world.bringToTop(this.g);
  }
- 
+
  if(this.list.length == 0) {
   pause(false);
   this.g.destroy(true);
